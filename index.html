@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Web</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <h1>Todo List</h1>
+          <button id="sign-in-btn">Sign in/up</button>
+        </div>
+        <div id="login-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="login-container">
+              <h2>Log in</h2>
+              <p id="login-message" class="hidden"></p>
+              <div class="login-inputs">
+                <label name="username" for="username">User name: <br><input type="text" id="username" placeholder="Username"></label>
+                <label name="password" for="password">Password: <br><input type="password" id="password" placeholder="Password">
+                </label>
+              </div>
+              <div class="login-btns">
+                <button id="login-btn">Log in</button>
+                <button id="register-btn">Register</button>
+              </div>
+              <p id="login-message" class="hidden"></p>
+            </div>
+          </div>
+        </div>
+        <div id="current-user"></div>
+        <div class="input-grid">
+            <input id="todo-input" type="text" placeholder="Write your to do here...">
+            <button id="add-todo-btn">Add</button>
+        </div>
+        <div class="todo-tabs">
+            <button id="all-todos-tab">All</button>
+            <button id="completed-todos-tab">completed</button>
+            <button id="uncompleted-todos-tab">uncompleted <span class="badge" id="uncompleted-todos-badge">1</span></button>
+        </div>
+        <ul class="todos-container"></ul>
+        <p id="no-todos-message" class="hidden">No todos available. Please add some!</p>
+        <div class="toast-container"></div>
+    </div>
+</body>
+</html>
